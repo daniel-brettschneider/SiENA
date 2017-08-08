@@ -1,0 +1,22 @@
+{
+	"init_modules": "empty",
+	"init_scheduler": "empty",
+	"tidy_up": "priv_tidyUp",
+	"chps_force_desired": false,
+	"heatpump_force_desired": false,
+	"suppress_auto_home_tick": true,
+	
+	"gridhome_shift_device": "do_not_shift",
+	"gridhome_handle_token": "priv_GridHomeHandleToken",
+	"gridhome_tick": "empty",
+	
+	"server_handle_token": "priv_ServerHandleToken",
+	"server_tick": "priv_ServerStartInterval",
+	
+	"clusterserver_handle_token": "priv_ClusterServerHandleToken",
+	"clusterserver_tick": "empty",
+	
+	"enable_clustering": false,
+	"adaption_categories": "adaption_categories_424",
+	"encryption": "hes" // bes, hes
+}

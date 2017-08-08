@@ -1,0 +1,5 @@
+{
+	"socket_type": "udp",				// udp, tcp
+	"com_net": "tree", 					// tree, brite, lte, plc
+	"check_duplicate_packets": 10		// increase for plc
+}

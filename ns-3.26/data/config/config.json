@@ -1,0 +1,81 @@
+{
+	"identifier": "test",				// identifier for result files, change to keep multiple results
+	"seed": 1337,						// seed
+
+
+	"start_date": "01.05.11",			// start date of simulation, has to comply with data_start_date
+	"duration": "3d",					// duration of simulation, y (years), d (days), h (hours), min (minutes)
+	"interval": "15min",					// simulation step interval
+	"log_all": false,					// show log messages, slows down simulation, check src/simulation/Turbo.h for even more speed
+	"data_start_date": "01.01.11",		// start date of data, currently data available from 01.01.11 to 31.12.13
+										//   -> this date is tick 0
+
+	"use_scenario": false,				// define a specific scenario of households
+	"scenario": "scenario_tank_size_test",		// the scenario file in data/scenario/
+
+	"clusters": 1,						// number of clusters
+	"homes": 100,						// number of households in a cluster
+	"smarthome_share": 0.0,				// share of smart homes
+	"gridhome_share": 0.0,				// share of grid homes -> remaining share are conventional homes
+	
+	"force_own": true,
+	"own_washingmachine": 0.945,		// possession rate (based on total number of households)
+	"own_dishwasher": 0.673,
+	"own_drier": 0.391,
+	"own_pv": 0.4,
+	"own_battery": 0.4,					
+	"own_heat": 0.4,					// -> heat device in general
+		"own_heatingrod": 0.0,			// ---> percentage of general heat device
+		"own_heatpump": 0.8,
+		"own_chps": 0.2,
+	"own_car_override": -1,				// -> -1: use scenario data, 0-x: static number of cars in household, MAX 4!!!
+	"own_car": 0.4,						// -> percentage of number of cars
+
+	
+	"dsm_mode": "load_shaping",		// load_shaping or peak_clipping
+	"shift_h0_factor": 1.5,
+	"overwrite_quality_goal": true,		// false: data/dsm/quality_goal is used
+	"quality_goal": 300,
+	"movable_devices": "washingmachine,dishwasher,drier",			// state movable devices here
+	"adaptable_devices": "car,battery",								// adaptable devices
+	"switchable_devices": "heatpump,chps,heatingrod",				// TODO		
+	"other_devices": "pv",									// colored differently from base load in plots
+	
+	"car_cost_barrier": 30.0,							// car in a smart homes charges when energy cost is lower than...
+	"battery_min_charge": 0.0,								// battery has to be charged by x % to perform DSM
+	"battery_desired_charge": 0.5,							// battery wants to be charged by x% if possible
+	"car_min_charge": 0.9,								// car has to be charged by x % to perform DSM
+	"car_desired_charge": 0.95,							// car wants to be charged by x% if possible
+	"car_charge_rate": "0.75,2400,0.2,11000,0.05,22000",// car charge rate (probability,rate in W)  
+	"heatingrod_min_critical": 0.15,							// tank has to be charged by x %
+	"heatingrod_max": 0.3,							// tank is desired to be charged by x %
+	"heatpump_min_critical": 0.5,							// tank has to be charged by x %
+	"heatpump_min_desired": 0.75,							// tank is desired to be charged by x %
+	"heatdemand_shift": "0,120",						// equally distribute the heat demand by x to y minutes (x,y)
+	"heatpump_min_demand": 0.6,							// heatpump power needs to be in [x,1] of heatdemand * 1000 / hours
+	"heatpump_min_hours": 2000,							// heatpump needs to run x hours per year
+	"heatpump_min_runtime": 15,							// min runtime heat pump in minutes
+	"chps_min_critical": 0.5,							// tank has to be charged by x %
+	"chps_min_desired": 0.75,							// tank is desired to be charged by x %
+	"chps_min_demand": 0.6,								// chps power needs to be in [x,1] of heatdemand * 1000 / hours
+	"chps_min_hours": 5000,								// chps needs to run x hours per year
+	"chps_min_runtime": 120,								// min runtime chps in minutes
+	"single_pv-system": false,
+		
+	// stats filter (comma separated, see stats_info.txt)
+	"filter_stats": false,
+	"save_only_these_stats": "stats,grouped",
+	"keep_only_these_stats_in_ram": "consumption,grouped,counters,heat,state,time,data,mac_rx,mac_tx",
+	
+
+	"graphs": "consumption2",		// execute these R files (data/graphs/)
+	"analyze": true,						// show some stats on console, also exported to file
+	"quality_start": 2,						//   -> the start day for dsm quality analysis
+	"quality_division": 0,					// In Minutes; 0 -> no division
+	
+
+	"simulate_communication": false,		// simulate the communcation network
+	"background_traffic": 0.0,
+	"simulate_power": false					// simulate power distribution network
+}
+

@@ -1,0 +1,2 @@
+#!/bin/bash
+./waf --command-template="valgrind --tool=$1 --time-stamp=yes %s" --run scratch/$2

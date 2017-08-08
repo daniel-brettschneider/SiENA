@@ -1,0 +1,55 @@
+# main links
+main:
+  - title: "Overview"
+    url: /
+  - title: "Contributors"
+    url: /contributors
+  - title: "UASO"
+    url: https://www.hs-osnabrueck.de/mobilkommunikation
+docs:
+  - title: Overview
+    children:
+      - title: "Overview"
+        url: /
+      - title: "License and Attribution"
+        url: /license
+      - title: "Contributors"
+        url: /contributors
+      - title: "Publications"
+        url: /publications
+      - title: "UASO"
+        url: https://www.hs-osnabrueck.de/mobilkommunikation
+  - title: Getting Started
+    children:
+      - title: "Dependencies"
+        url: /dependencies
+      - title: "Installation"
+        url: /installation
+      - title: "Running a Simulation"
+        url: /run-simulation
+  - title: The Simulator
+    children:
+      - title: "Architecture"
+        url: /architecture
+      - title: "Load Simulator"
+        url: /load-simulator
+      - title: "Data Basis"
+        url: /data-basis
+      - title: "Simulation Models"
+        url: /sim-models
+      - title: "Communication Networks"
+        url: /com-net
+      - title: "Powergrid"
+        url: /powergrid
+  - title: Algorithms
+    children:
+      - title: "PrivADE"
+        url: /algo-privade
+      - title: "COHDA"
+        url: /algo-cohda
+      - title: "PowerMatcher"
+        url: /algo-pm
+  - title: Developing New Modules
+    children:
+      - title: "Examples"
+        url: /develope

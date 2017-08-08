@@ -1,0 +1,13 @@
+{
+	"nodes_per_enbNode": 250,
+	"max_distance_to_enbNode": 500,
+	"distance_between_enbNodes": 1000000,		// in Meter (m)
+	"delay_min": 5000, // ms
+	"delay_max": 10000, // ms
+	"minAngle": 0,
+	"maxAngle": 3.1415,
+	"random_function": "Uniform",
+	"download": 100,
+	"upload": 100,
+	"lte_scheduler": "ns3::CqaFfMacScheduler"
+}

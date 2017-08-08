@@ -1,0 +1,22 @@
+## available stats to export to csv
+charge			charge of storages (ev, bat, tank, ...)
+configs			device configurations
+consumption		consumption of all devices
+counters		activation counters, ...
+grouped			consumption of device types (base, movable, ...)
+heat			heat generation, demand of households, ...
+msgs			number of messages needed for communication in interval
+pcharge			charge in %
+quality			dsm quality
+state			states of all devices
+stats			stats displayed at end of simulation
+time			time needed for communication in interval
+
+## citygrid
+rounds			number of rounds in interval
+
+## powermatcher
+powermatcher	price
+
+## online sim
+web				exports stats for online simulator

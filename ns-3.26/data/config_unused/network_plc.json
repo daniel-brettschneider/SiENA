@@ -1,0 +1,43 @@
+{
+	"plc_network_cluster": 5,								// if this key has the same value than "clusters" in config.json each physical plc network cluster represents a logical cluster
+	"plc_branch_size": 10,
+	
+	"plc_grid_frequency": 50,  								// grid frequency in Hz (50 oder 60Hz)
+	"plc_frequency_min": 41992, //35e3,						// minimum used frequency specturm in Hz (Double Value)
+	"plc_frequency_max": 89324, //90e3, 					// maximum used frequency specturm in Hz (Double Value)
+	"plc_number_of_bands": 97,								// number of bands into which the frequency spectrum is divided 
+	"plc_symbol_length": 2240, //735,						// in MicroSeconds (defines time granularity)
+	"plc_transmit_power_spectral_density": 1e-5,			//Standard: -50dbm/Hz (1e-8); Maximum -20dBm/Hz (1e-5) [EN 50065-1]
+	"plc_node_shunt_impedanz": 50,
+	"plc_worst_case_background_noise": true,				// if false, best case backgroundnoise will be used 
+	
+	"plc_startposition_x": 100,
+	"plc_startposition_y": 100,
+	"plc_dist_betw_two_main_junction_nodes_min": 40,	//40// in Meter (m), has to be greater than 2* "plc_distance_between_junction_nodes_and_home_node_max"
+	"plc_dist_betw_two_main_junction_nodes_max": 60,	//60// in Meter (m)
+	"plc_dist_betw_two_junction_nodes_min": 25,			//25// in Meter (m)
+	"plc_dist_betw_two_junction_nodes_max": 35,			//35// in Meter (m)
+	"plc_dist_betw_junction_node_and_home_node_min": 5,//5	// in Meter (m)
+	"plc_dist_betw_junction_node_and_home_node_max": 15,//15	// in Meter (m)
+	
+																// *_1_4 || *_1_2 || *QAM64_16_21 defines the code rate of usable data
+	"pcl_header_modulation_and_coding_type": 3,					// 0: BPSK_1_4, 1: BPSK_1_2, 2: QPSK_1_2, 3: EIGHT_PSK_1_2, 4: QAM16_1_2, 5: QAM64_16_21
+	"plc_payload_modulation_and_coding_type": 3,				// 0: BPSK_1_4, 1: BPSK_1_2, 2: QPSK_1_2, 3: EIGHT_PSK_1_2, 4: QAM16_1_2, 5: QAM64_16_21, 6: BPSK_RATELESS, 7: QAM4_RATELESS, 8: EIGHT_PSK_RATELESS, 9: QAM16_RATELESS, 10: QAM32_RATELESS, 11: QAM64_RATELESS 
+	"m_macMinBE": 3,			// 0-macMaxBE default 3
+	"m_macMaxBE": 5,			// 3-8 default 5
+	"m_macMaxCSMABackoffs": 4,	// 0-5 default 4 (teilweise war 10 eingestellt)
+	"m_aUnitBackoffPeriod": 20	// 20 symbols in each backoff periods; default 1 or 20
+	//                                                                                       
+	//                                                                                        
+	// Generation of one Network Cluster:                                                     
+	//                                                                                        
+	//              ()--(-)--()   ()-(-)---()                                                     
+	//                   |            |                                                           
+	//                   |            |                                                           
+	//               ()-(-)---() ()--(-)--()                                                      
+	//                   |            |                                                           
+	//                   |            |                                                           
+	//          (x)-----(+)----------(+)--...                                                     
+	//                                                                                        
+	// Caption: (x): Outlet Node; (+): Main Junction Node; (-): Junction Node; (): Home Node  
+}

@@ -1,0 +1,24 @@
+{
+	"init_modules": "empty",
+	"init_scheduler": "privadePlus_SchedulerInit",
+	"tidy_up": "privade_tidyUp",
+	"chps_force_desired": false,
+	"heatpump_force_desired": false,
+	"suppress_auto_home_tick": false,
+	
+	"gridhome_shift_device": "do_not_shift",
+	"gridhome_handle_token": "privadePlus_GridHomeHandleToken",
+	"gridhome_tick": "privadePlus_GridHomeTick",
+	
+	"server_handle_token": "privadePlus_AggregatorHandleToken",
+	"server_tick": "empty",
+	
+	"clusterserver_handle_token": "privadePlus_ServerHandleToken",
+	"clusterserver_tick": "empty",
+	
+	"enable_clustering": true, // create all servers
+	"adaption_categories": "adaption_categories_all",
+	"encryption": "hes", // bes, hes
+	"privade_backoff": 1000000, // us
+	"privade_backoff2": 100000 // us
+}

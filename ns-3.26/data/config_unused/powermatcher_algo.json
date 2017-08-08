@@ -1,0 +1,26 @@
+{
+	"init_modules": "empty",
+	"init_scheduler": "powermatcher_SchedulerInit",
+	"tidy_up": "powermatcher_tidyUp",
+	"chps_force_desired": false,
+	"heatpump_force_desired": false,
+	"suppress_auto_home_tick": false,
+	
+	"gridhome_shift_device": "do_not_shift",
+	"gridhome_handle_token": "powermatcher_GridHomeHandleToken",
+	"gridhome_tick": "powermatcher_GridHomeTick",
+	"pm_consumption_beyond": true,
+	
+	"server_handle_token": "powermatcher_ConcentratorHandleToken",
+	"server_tick": "empty",
+	"clusterserver_handle_token": "powermatcher_AuctioneerHandleToken",
+	"clusterserver_tick": "empty",
+	"enable_clustering": true,
+	
+	"min_price": 0.0,
+	"max_price": 0.6,
+	"pm_backoff": 100000,
+	"pm_backoff_price": 0,
+	
+	"adaption_categories": "adaption_categories_all" // not used... 
+}

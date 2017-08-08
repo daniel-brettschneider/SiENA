@@ -1,0 +1,473 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.4.1 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>PowerMatcher - SiENA Documentation</title>
+
+
+
+
+<meta name="description" content="Documentation of the Smart Grid Simulator SiENA">
+
+
+
+
+<meta name="author" content="Your Name">
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="SiENA Documentation">
+<meta property="og:title" content="PowerMatcher">
+
+
+  <link rel="canonical" href="http://localhost:4000/algo-pm">
+  <meta property="og:url" content="http://localhost:4000/algo-pm">
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "University of Applied Sciences Osnabrück",
+      "url" : "http://localhost:4000",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="SiENA Documentation Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">SiENA Documentation</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/">Overview</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/contributors">Contributors</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://www.hs-osnabrueck.de/mobilkommunikation">UASO</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Overview</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/" class="">Overview</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/license" class="">License and Attribution</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/contributors" class="">Contributors</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/publications" class="">Publications</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://www.hs-osnabrueck.de/mobilkommunikation" class="">UASO</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/dependencies" class="">Dependencies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/installation" class="">Installation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/run-simulation" class="">Running a Simulation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">The Simulator</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/architecture" class="">Architecture</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/load-simulator" class="">Load Simulator</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/data-basis" class="">Data Basis</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/sim-models" class="">Simulation Models</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/com-net" class="">Communication Networks</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/powergrid" class="">Powergrid</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Algorithms</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/algo-privade" class="">PrivADE</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/algo-cohda" class="">COHDA</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/algo-pm" class="active">PowerMatcher</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Developing New Modules</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="http://localhost:4000/develope" class="">Examples</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="PowerMatcher">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">PowerMatcher
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p class="notice">Kok, J. K., C. J. Warmer, and I. G. Kamphuis. “PowerMatcher: Multiagent Control in the Electricity Infrastructure.” In Proceedings of the Fourth International Joint Conference on Autonomous Agents and Multiagent Systems, 75–82. AAMAS ’05. New York, NY, USA: ACM, 2005. <a href="doi:10.1145/1082473.1082807">doi:10.1145/1082473.1082807</a>.</p>
+
+<p>PowerMatcher is a well-known method for supply demand matching. In PowerMatcher, households send bids to an auctioneer, who determines an energy price depending on the accumulated bids and a load target. The participating agents form a tree network. PowerMatcher is not a distributed system in terms of agents performing necessary calculations by themselves, like PrivADE or COHDA, but a distributed market-based control algorithm. However, it is still chosen as a comparison to PrivADE and COHDA due to its simple architecture and small communication footprint.</p>
+
+<p><img src="http://localhost:4000/assets/img/powermatcher.png" alt="powermatcher" /></p>
+
+<p>Adaptable devices of a household are represented by device agents. Device agents are tasked with creating bids for the associated device and handing it over to the household which serves as an aggregator. Different device types and device states result in different bids. A device agent connected to a HP adapts the bid according to the charge level of an associated heat storage. If the charge level is high, the HP does not necessarily need to run, thus, high energy prices are not accepted. As opposed to the step function of a HP bid, a BS bid matches a monotonically decreasing function.</p>
+
+<p><img src="http://localhost:4000/assets/img/bid.png" alt="bid" /></p>
+
+<p>A bid represents a set of coordinates with linear calculation in between as opposed to a function with a specific step size. Thus, the amount of data is reduced, because only key points need to be transmitted, for example, {(0.2€; 2 kW), (0.2€; 0 kW} for a HP.</p>
+
+<p>PowerMatcher proceeds as follows:</p>
+
+<ol>
+  <li>Device agents of a household create bids. The household accumulates the bids of its device agents and sends it to the upper layer. The upper layer might consist of a concentrator or an auctioneer agent.</li>
+  <li>Concentrators accumulate all bids of their associated agents and forward the resulting bid.</li>
+  <li>Upon receiving all bids, the auctioneer agent calculates the intersection of all bids and the load target \( \mu \). A value on the ordinate of the intersection is the energy price to achieve \( \mu \). This price is sent back through the concentrators to all device agents.</li>
+  <li>The device agents receive the energy price and set their energy consumption accordingly.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 University of Applied Sciences Osnabrück. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+
+
+  </body>
+</html>

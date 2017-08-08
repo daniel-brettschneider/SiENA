@@ -1,0 +1,25 @@
+{
+	"car":[
+		{ "name": "Renault Zoe", "capacity": 22, "fuel_economy": 14.6, "fuel_economy_real": 16.71, "category": "Supermini" },
+		{ "name": "Smart Fortwo ED", "capacity": 17.6, "fuel_economy": 13.5, "fuel_economy_real": 15.5, "category": "Supermini" },
+		{ "name": "i-MiEV o. C-Zero o. iOn", "capacity": 14.5, "fuel_economy": 12.5, "fuel_economy_real": 15.22, "category": "Supermini" },
+		{ "name": "VW E-up!", "capacity": 18.7, "fuel_economy": 11.7, "fuel_economy_real": 14.38, "category": "Supermini" },
+		{ "name": "BMW i3 60 Ah", "capacity": 18.8, "fuel_economy": 12.9, "fuel_economy_real": 16.41, "category": "Supermini" },
+		{ "name": "BMW i3 94 Ah", "capacity": 27.2, "fuel_economy": 12.6, "fuel_economy_real": 16.41, "category": "Supermini" },
+		{ "name": "Kia Soul EV", "capacity": 27, "fuel_economy": 18, "fuel_economy_real": 18, "category": "Compact_car" },
+		{ "name": "VW e-Golf", "capacity": 24.2, "fuel_economy": 12.7, "fuel_economy_real": 21.53, "category": "Compact_car" },
+		{ "name": "VW e-Golf 2016", "capacity": 35.8, "fuel_economy": 12.7, "fuel_economy_real": 21.53, "category": "Compact_car" },
+		{ "name": "Nissan Leaf ", "capacity": 24, "fuel_economy": 15, "fuel_economy_real": 17.16, "category": "Compact_car" },
+		{ "name": "Nissan Leaf 30kWh", "capacity": 30, "fuel_economy": 15, "fuel_economy_real": 17.16, "category": "Compact_car" },
+		{ "name": "Ford Focus Electric", "capacity": 23, "fuel_economy": 14.4, "fuel_economy_real": 15.9, "category": "Compact_car" },
+		{ "name": "Tesla Model S 60", "capacity": 60, "fuel_economy": 19, "fuel_economy_real": 21.17, "category": "Luxury_vehicle" },
+		{ "name": "Tesla Model S 75", "capacity": 75, "fuel_economy": 19, "fuel_economy_real": 21.17, "category": "Luxury_vehicle" },
+		{ "name": "Tesla Model S P90D", "capacity": 90, "fuel_economy": 22.1, "fuel_economy_real": 21.17, "category": "Luxury_vehicle" },
+		{ "name": "Tesla Model S P100D", "capacity": 100, "fuel_economy": 22.1, "fuel_economy_real": 21.17, "category": "Luxury_vehicle" },
+		{ "name": "Tesla Model X 60D", "capacity": 60, "fuel_economy": 19.6, "fuel_economy_real": 19.6, "category": "Crossover" },
+		{ "name": "Tesla Model X 75D", "capacity": 75, "fuel_economy": 19.6, "fuel_economy_real": 19.6, "category": "Crossover" },
+		{ "name": "Tesla Model X P90D", "capacity": 90, "fuel_economy": 22.39, "fuel_economy_real": 22.39, "category": "Crossover" },
+		{ "name": "Tesla Model X P100D", "capacity": 100, "fuel_economy": 22.39, "fuel_economy_real": 22.39, "category": "Crossover" },
+		{ "name": "BYD e6", "capacity": 80, "fuel_economy": 20, "fuel_economy_real": 20, "category": "Crossover" }
+	]
+}

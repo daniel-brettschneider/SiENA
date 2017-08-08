@@ -1,0 +1,8 @@
+{
+	"tree_leaf_cluster_size": 10,
+	"tree_leaf_data_rate": "5Mbps",
+	"tree_leaf_delay": "20ms",
+	"tree_router_data_rate": "1Gbps",
+	"tree_router_delay": "2ms",
+	"tree_layers": 3
+}

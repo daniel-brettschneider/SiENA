@@ -1,0 +1,30 @@
+{
+	"init_modules": "empty",
+	"init_scheduler": "COHDA_scheduler_init",
+	"tidy_up": "COHDA_tidyUp",
+	"enable_clustering": false,
+	"chps_force_desired": false,
+	"suppress_auto_home_tick": false,
+	"heatpump_force_desired": false,
+
+	"gridhome_shift_device": "do_not_shift",
+	"gridhome_handle_token": "COHDA_GridHomeHandleToken",
+	"gridhome_tick": "empty",
+	
+	"server_handle_token": "COHDA_ServerHandleToken",
+	"server_tick": "COHDA_ServerStartInterval",
+	"clusterserver_handle_token": "COHDA_ClusterServerHandleToken",
+	"clusterserver_tick": "empty",
+	
+	"generate_overlay_network": "COHDA_OverlaynetworkSmallWorld_WS", // {COHDA_OverlaynetworkSmallWorld, COHDA_OverlaynetworkRing, COHDA_OverlaynetworkTree, COHDA_OverlaynetworkRandom, COHDA_OverlaynetworkClientServer}
+	"phi": 0.2,
+	"K" : 4,
+	"number_recipients": 0,	//number recipients, or tree degree
+	"schedule_time_ms": 250,
+	"random_schedule_factor": 0.4,	//0 = no Random Time; 1 = 100 percent random time (from 0 to 2*schelude_time_ms)
+	"send_first_token_random": true,
+	"error_function": "load_shaping",	//"load_shaping" or "peak_clipping"
+	"backoff_percentage": 5,			//If more than one message zu send, following messages will be delayed by x percent of the schedule_time_ms
+	
+	"adaption_categories": "adaption_categories_all" // not used... 
+}

@@ -1,0 +1,7 @@
+{
+	"brite_nodes_extra": 1,
+	"min_delay": 1,				// in ms
+	"max_delay": 20,			// in ms
+	"min_datarate": 1,          // in Mbps
+	"max_datarate": 16		 	// in Mbps	
+}

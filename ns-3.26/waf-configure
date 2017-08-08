@@ -1,0 +1,3 @@
+#!/bin/bash
+./waf distclean
+CXXFLAGS_EXTRA="-Wno-error" ./waf configure --with-brite=../BRITE -d release --disable-python --enable-modules=siena

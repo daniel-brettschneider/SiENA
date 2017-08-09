@@ -1,4 +1,5 @@
 #include "../../siena/simulator/DataBasis.h"
+#include <cstdlib>
 
 namespace ns3 {
 
@@ -186,16 +187,27 @@ double DataBasis::parseDouble(std::string s) {
 }
 
 void DataBasis::createBinaryCSV(std::string filename) {
+	Log::f(TAG, "creating binary file " + filename);
 	std::ifstream file(filename.c_str());
 	std::ofstream ofs((filename + ".bin").c_str(), std::ios::binary);
 	std::string line;
+	int count = 0;
+	int n = 1;
 	while(getline(file, line)) {
+		if(count >= 5000000) {
+			Log::f(TAG, "\tcreating new part");
+			ofs.flush();
+			ofs.close();
+			count = 0;
+			ofs = std::ofstream((filename + ".bin." + Helper::toString(++n)).c_str(), std::ios::binary);
+		}
 		double d;
 		std::stringstream s(line);
 		while(s >> d) {
 			ofs.write(reinterpret_cast<char*>(&d), sizeof(d));
 			if(s.peek() == ',')
 				s.ignore();
+			count++;
 		}
 	}
 }
@@ -211,8 +223,12 @@ void DataBasis::preloadBinaryLineFile(std::string filename, std::string dataName
 	double sum = 0;
 	double d;
 	int i;
+	int nFile = 1;
 	for(i = 0; i < x * y; i++) {
-		file.read(reinterpret_cast<char*>(&d), sizeof(d));
+		if(file.eof()) {
+			Log::f(TAG, "\tpreloading next part");
+			file = std::ifstream((filename + "." + Helper::toString(++nFile)).c_str(), std::ios::binary);
+		} file.read(reinterpret_cast<char*>(&d), sizeof(d));
 		sum += d;
 		if(i > 0 && i % interval == 0) {
 			line->push_back(sum / interval);

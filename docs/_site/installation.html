@@ -395,7 +395,47 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>todo</p>
+        <p>We provide a <em>Dockerfile</em> for easy installation and tryout. Just follow these steps:</p>
+
+<ol>
+  <li>Install <a href="https://www.docker.com/">Docker</a></li>
+  <li>Download the <a href="/assets/data/Dockerfile">Dockerfile</a></li>
+  <li>Create the siena container with <code class="highlighter-rouge">docker build -t siena /path/to/Dockerfile</code> (this may take some time, it installs all dependencies and loads the code)</li>
+  <li>Run the siena container with <code class="highlighter-rouge">docker run -ti siena</code> (you should now see a command prompt located at <code class="highlighter-rouge">SiENA/ns-3.26</code>)</li>
+  <li>Simulate
+    <ul>
+      <li>Edit <code class="highlighter-rouge">data/config/</code> (alternative algorithms etc. are stored in <code class="highlighter-rouge">data/config_unused</code>)</li>
+      <li>Run a simulation with <code class="highlighter-rouge">./waf --run siena</code></li>
+      <li>Take a look at the results in <code class="highlighter-rouge">results/</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="programming">Programming</h2>
+<p>If you want to extend the code of SiENA, you need to install a few more things related to ns-3. Take a look at their <a href="https://www.nsnam.org/wiki/Installation">installation instructions</a>.</p>
+
+<p>Next, follow the steps of the Dockerfile:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM ubuntu
+
+# install dependecies
+RUN apt-get update &amp;&amp; apt-get install -y gcc g++ build-essential python libxml2 libxml2-dev git libjsoncpp-dev libboost-all-dev r-base
+
+# load r packages for plots
+RUN R -e "install.packages(c('ggplot2','reshape','plyr'), repos='http://cran.rstudio.com/')"
+
+# get code from github
+RUN git clone https://github.com/daniel-brettschneider/SiENA.git
+
+# build siena
+RUN cd SiENA/BRITE &amp;&amp; make
+WORKDIR SiENA/ns-3.26
+RUN ./waf-configure
+RUN ./waf
+</code></pre>
+</div>
+
+<p>Proceed at the <a href="/develope">Developing New Modules</a> page</p>
 
         
       </section>

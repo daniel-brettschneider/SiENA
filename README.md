@@ -1,10 +1,9 @@
 # SiENA
 Simulator for Energy Network Applications combining Power, Heat and Communication
 
-This simulator will be open source soon...
+Take a look at the [documentation](https://daniel-brettschneider.github.io/SiENA/).
 
-For now, refer to:
-https://www.vde-verlag.de/proceedings-de/454308086.html
+To attribute our work, please link or reference our paper on SiENA:
 
-Or take a look at the limited online version:
-http://siena.hs-osnabrueck.de/
+[https://www.vde-verlag.de/proceedings-de/454308086.html]
+

@@ -37,4 +37,4 @@ RUN ./waf-configure
 RUN ./waf
 ```
 
-Proceed at the [Developing New Modules](/develope) page
+Proceed at the [Developing New Modules](/develope) page.

@@ -16,7 +16,7 @@
 	"clusters": 1,						// number of clusters
 	"homes": 100,						// number of households in a cluster
 	"smarthome_share": 0.0,				// share of smart homes
-	"gridhome_share": 0.0,				// share of grid homes -> remaining share are conventional homes
+	"gridhome_share": 1.0,				// share of grid homes -> remaining share are conventional homes
 	
 	"force_own": true,
 	"own_washingmachine": 0.945,		// possession rate (based on total number of households)

@@ -23,7 +23,7 @@ gallery3:
 **The goal of SiENA is to offer a dynamic approach to evaluate new DEM algorithms and applications in a realistic smart grid scenario.**
 {: .notice--warning}
 
-Want to take a quick look at some simulations? [Try it out](/installation) with Docker!
+Want to take a quick look at some simulations? [Try it out](installation) with Docker!
 {: .notice--info}
 
 ### Scope
